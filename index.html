@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Note App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="appContainer">
+        <div class="section-1">
+            <h2>Sticky Notes📝</h2>
+            <button id="btnShow">Show tasks</button>
+            <button id="btnAddTask">Add Task</button>
+            <button id="incomplete">Incomplete Tasks</button>
+            <button id="deleteAll">Delete All</button>
+            <div class="inputBox">
+                <!-- <input id="input" type="text" placeholder="Add a new note..."> -->
+                <input id="searchInput" type="text" placeholder="Search here...">
+                <button id="btnSearch">🔍Search</button>
+            </div>
+        </div>
+        <!-- <h2 class="currentTask">Current Tasks</h2> -->
+        <label class="currentTask" for="currentTask">Current Tasks</label>
+        <div class="noteContainer" id="noteContainer">
+
+            <!-- Notes will be dynamically added here -->
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">X</span>
+            <h2>Edit Note</h2>
+            <div class="form-group">
+                <label class="editTitle" for="editTitle">Title:</label>
+                <input id="editTitle" type="text" placeholder="Edit title...">
+            </div>
+            <div class="form-group">
+                <label class="editContent" for="editContent">Content:</label>
+                <textarea id="editContent" placeholder="Add/Edit content..."></textarea>
+            </div>
+            <button id="btnSaveEdit">Save</button>
+        </div>
+    </div>
+
+    <div id="addModal" class="addModal">
+        <div class="addModalContent">
+            <span class="addClose">X</span>
+            <div class="form-group">
+                <p>Title:</p>
+                <input id="addTitle" type="text" placeholder="Add title...">
+            </div>
+            <div class="form-group">
+                <p>Content:</p>
+                <textarea id="addContent" placeholder="Add content..."></textarea>
+            </div>
+            <button id="btnAdd">Add</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
